@@ -15,6 +15,6 @@ public interface ProductRepo extends JpaRepository<Product, Integer> {
     @Query("SELECT p FROM Product p WHERE p.name LIKE ?1 AND p.price BETWEEN ?2 AND ?3")
     Page<Product> searchByNamePrice(String keyword, int minPrice, int maxPrice,  Pageable pageable);
 
-    Page<Product> findAllByNameLike(String keywords, Pageable pa geable);
+    Page<Product> findAllByNameLike(String keywords, Pageable pageable);
 
 }
